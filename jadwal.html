@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Jadwal Perkuliahan</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #ecf0f1;
+      padding: 2rem;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      background: #fff;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 1.5rem;
+      color: #2c3e50;
+    }
+
+    .table-responsive {
+      overflow-x: auto;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1rem;
+    }
+
+    th, td {
+      padding: 1rem;
+      text-align: center;
+      border-bottom: 1px solid #ddd;
+    }
+
+    th {
+      background-color: #f39c12;
+      color: white;
+    }
+
+    tr:hover {
+      background-color: #f6f6f6;
+    }
+
+    .mata-kuliah {
+      font-weight: bold;
+      color: #2c3e50;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 2rem;
+      color: #999;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 600px) {
+      th, td {
+        padding: 0.5rem;
+        font-size: 0.9rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Jadwal Perkuliahan</h1>
+
+    <div class="table-responsive">
+      <table>
+        <thead>
+          <tr>
+            <th>Hari</th>
+            <th>Waktu</th>
+            <th>Mata Kuliah</th>
+            <th>Dosen</th>
+            <th>Ruang</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Senin</td>
+            <td>08:00 - 09:40</td>
+            <td class="mata-kuliah">Komunikasi Islam</td>
+            <td>Dr. Ahmad Rasyid</td>
+            <td>B.203</td>
+          </tr>
+          <tr>
+            <td>Senin</td>
+            <td>10:00 - 11:40</td>
+            <td class="mata-kuliah">Metodologi Dakwah</td>
+            <td>Ust. Fadli Zain</td>
+            <td>B.203</td>
+          </tr>
+          <tr>
+            <td>Selasa</td>
+            <td>08:00 - 09:40</td>
+            <td class="mata-kuliah">Psikologi Komunikasi</td>
+            <td>Dr. Nur Hidayah</td>
+            <td>B.204</td>
+          </tr>
+          <tr>
+            <td>Rabu</td>
+            <td>13:00 - 14:40</td>
+            <td class="mata-kuliah">Teknologi Media Dakwah</td>
+            <td>Fauzan, M.I.Kom</td>
+            <td>Lab. Komputer</td>
+          </tr>
+          <tr>
+            <td>Kamis</td>
+            <td>08:00 - 09:40</td>
+            <td class="mata-kuliah">Bahasa Arab</td>
+            <td>Dr. Rahmawati</td>
+            <td>B.101</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <footer>&copy; 2025 Fakultas Dakwah UIN SMH Banten</footer>
+</body>
+</html>

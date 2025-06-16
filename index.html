@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Beranda - Fakultas Dakwah</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #ecf0f1;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    header {
+      background-color: #2c3e50;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      background-color: #f39c12;
+    }
+    nav li {
+      position: relative;
+    }
+    nav a {
+      display: block;
+      padding: 1rem 1.5rem;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover,
+    nav .active {
+      background-color: #e67e22;
+    }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #f39c12;
+      min-width: 200px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+      z-index: 1;
+      border-radius: 0 0 0.5rem 0.5rem;
+    }
+    .dropdown-content a {
+      padding: 0.75rem 1rem;
+      display: block;
+      border-bottom: 1px solid rgba(255,255,255,0.2);
+    }
+    .dropdown.show .dropdown-content {
+      display: block;
+    }
+    main {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+    }
+    .card-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
+    }
+    .card {
+      background-color: white;
+      padding: 2rem;
+      border-radius: 1rem;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      width: 250px;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+    }
+    .card-icon {
+      font-size: 2.5rem;
+      color: #f39c12;
+      margin-bottom: 1rem;
+    }
+    .card a {
+      font-size: 1.1rem;
+      font-weight: bold;
+      color: #2c3e50;
+      text-decoration: none;
+    }
+    .card a:hover {
+      color: #f39c12;
+    }
+    footer {
+      background-color: #2c3e50;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+    }
+    @media (max-width: 768px) {
+      .card-container {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>FAKULTAS DAKWAH</h1>
+    <p>Universitas Islam Negeri Sultan Maulana Hasanuddin Banten</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#" class="active">Beranda</a></li>
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle">Layanan Akademik</a>
+        <div class="dropdown-content">
+          <a href="kalender.html">Kalender Akademik</a>
+          <a href="jadwal.html">Jadwal Perkuliahan</a>
+          <a href="pmb.uinbanten.ac.id">Pendaftaran Mahasiswa Baru</a>
+        </div>
+      </li>
+      <li><a href="kontak.html">Kontak</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <div class="card-container">
+      <div class="card">
+        <div class="card-icon">📡</div>
+        <a href="https://s.id/prodi-kpi">Komunikasi dan Penyiaran Islam</a>
+      </div>
+      <div class="card">
+        <div class="card-icon">💬</div>
+        <a href="https://s.id/Prodi-BKI">Bimbingan Konseling Islam</a>
+      </div>
+      <div class="card">
+        <div class="card-icon">👥</div>
+        <a href="https://s.id/Prodi-PMI">Pengembangan Masyarakat Islam</a>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    &copy; 2025 Fakultas Dakwah UIN SMH Banten. All rights reserved.
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const toggles = document.querySelectorAll(".dropdown-toggle");
+      toggles.forEach(function (toggle) {
+        toggle.addEventListener("click", function (e) {
+          e.preventDefault();
+          const parent = this.parentElement;
+          document.querySelectorAll(".dropdown").forEach(function (el) {
+            if (el !== parent) el.classList.remove("show");
+          });
+          parent.classList.toggle("show");
+        });
+      });
+      document.addEventListener("click", function (e) {
+        if (!e.target.closest(".dropdown")) {
+          document.querySelectorAll(".dropdown").forEach(function (el) {
+            el.classList.remove("show");
+          });
+        }
+      });
+    });
+  </script>
+</body>
+</html>

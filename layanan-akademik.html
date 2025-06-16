@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Layanan Akademik</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <style>
+    body {
+      font-family: "Segoe UI", sans-serif;
+      background-color: #f0f4f8;
+      margin: 0;
+    }
+
+    .layanan-container {
+      max-width: 1100px;
+      margin: 50px auto;
+      padding: 20px;
+    }
+
+    .layanan-header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .layanan-header h2 {
+      font-size: 28px;
+      color: #1a374d;
+    }
+
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+    }
+
+    .card-layanan {
+      background-color: #ffffff;
+      border-radius: 14px;
+      padding: 30px 20px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+      text-align: center;
+      transition: 0.3s ease-in-out;
+    }
+
+    .card-layanan:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+
+    .card-layanan i {
+      font-size: 32px;
+      color: #f39c12;
+      margin-bottom: 15px;
+    }
+
+    .card-layanan h3 {
+      font-size: 18px;
+      color: #1a374d;
+      font-weight: bold;
+    }
+
+    @media screen and (max-width: 600px) {
+      .layanan-header h2 {
+        font-size: 22px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <main class="layanan-container">
+    <div class="layanan-header">
+      <h2><i class="fas fa-graduation-cap"></i> Layanan Akademik Fakultas Dakwah</h2>
+    </div>
+
+    <div class="cards-grid">
+      <div class="card-layanan">
+        <i class="fas fa-bullhorn"></i>
+        <h3>Komunikasi dan Penyiaran Islam</h3>
+      </div>
+
+      <div class="card-layanan">
+        <i class="fas fa-comments"></i>
+        <h3>Bimbingan Konseling Islam</h3>
+      </div>
+
+      <div class="card-layanan">
+        <i class="fas fa-people-carry"></i>
+        <h3>Pengembangan Masyarakat Islam</h3>
+      </div>
+    </div>
+  </main>
+
+</body>
+</html>

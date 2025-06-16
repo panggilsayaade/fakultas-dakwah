@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kalender Akademik</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #ecf0f1;
+      color: #2c3e50;
+      padding: 2rem;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: auto;
+      background: white;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      text-align: center;
+      color: #2c3e50;
+      margin-bottom: 1rem;
+    }
+
+    p.description {
+      text-align: center;
+      margin-bottom: 2rem;
+      color: #7f8c8d;
+    }
+
+    .accordion {
+      border-top: 1px solid #ccc;
+    }
+
+    .accordion-item {
+      border-bottom: 1px solid #ccc;
+    }
+
+    .accordion-header {
+      padding: 1rem;
+      background-color: #f39c12;
+      color: white;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .accordion-header:hover {
+      background-color: #e67e22;
+    }
+
+    .accordion-content {
+      display: none;
+      padding: 1rem;
+      background-color: #fdfdfd;
+    }
+
+    .accordion-content ul {
+      padding-left: 1.5rem;
+    }
+
+    .accordion-content li {
+      margin-bottom: 0.5rem;
+    }
+
+    footer {
+      margin-top: 2rem;
+      text-align: center;
+      color: #999;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 600px) {
+      body {
+        padding: 1rem;
+      }
+
+      .container {
+        padding: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Kalender Akademik</h1>
+    <p class="description">Fakultas Dakwah - Universitas Islam Negeri Sultan Maulana Hasanuddin Banten</p>
+
+    <div class="accordion">
+      <div class="accordion-item">
+        <div class="accordion-header">Semester Ganjil 2025/2026</div>
+        <div class="accordion-content">
+          <ul>
+            <li>1 Agustus 2025 - Awal Pendaftaran Ulang</li>
+            <li>15 Agustus 2025 - Awal Perkuliahan</li>
+            <li>10-14 Oktober 2025 - Ujian Tengah Semester</li>
+            <li>12-16 Desember 2025 - Ujian Akhir Semester</li>
+            <li>23 Desember 2025 - Akhir Semester</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <div class="accordion-header">Semester Genap 2025/2026</div>
+        <div class="accordion-content">
+          <ul>
+            <li>5 Januari 2026 - Awal Pendaftaran</li>
+            <li>19 Januari 2026 - Awal Perkuliahan</li>
+            <li>23-27 Maret 2026 - Ujian Tengah Semester</li>
+            <li>1-5 Juni 2026 - Ujian Akhir Semester</li>
+            <li>10 Juni 2026 - Akhir Semester</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>&copy; 2025 Fakultas Dakwah UIN SMH Banten</footer>
+
+  <script>
+    const items = document.querySelectorAll(".accordion-header");
+
+    items.forEach(header => {
+      header.addEventListener("click", () => {
+        const content = header.nextElementSibling;
+        const open = content.style.display === "block";
+        
+        // Close all
+        document.querySelectorAll(".accordion-content").forEach(c => c.style.display = "none");
+
+        // Toggle current
+        content.style.display = open ? "none" : "block";
+      });
+    });
+  </script>
+</body>
+</html>
